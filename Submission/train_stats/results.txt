@@ -1,0 +1,13 @@
+TRAINING RESULTS
+==================================================
+
+Best Val IoU: 0.4554
+Final Val IoU: 0.4538
+Final Val Dice: 0.6397
+Final Val Accuracy: 0.8337
+
+Hyperparameters:
+  Epochs: 25
+  Batch Size: 8
+  Learning Rate: 0.0003
+  Image Size: 266x476
