@@ -1,0 +1,17 @@
+mAP50 RESULTS (IoU Threshold = 0.5)
+==================================================
+
+mAP50: 17.26%
+
+Per-Class AP@50:
+--------------------------------------------------
+  Background          : 0.00%
+  Trees               : 0.00%
+  Lush Bushes         : 0.00%
+  Dry Grass           : 0.00%
+  Dry Bushes          : 0.00%
+  Ground Clutter      : 0.00%
+  Logs                : 0.00%
+  Rocks               : 0.00%
+  Landscape           : 72.55%
+  Sky                 : 100.00%

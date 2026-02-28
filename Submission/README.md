@@ -105,19 +105,20 @@ dataset/
 ### Validation Performance (25 epochs)
 | Metric | Value |
 |--------|-------|
-| Best Val IoU | 45.54% |
-| Final Val IoU | 45.38% |
-| Final Val Dice | 63.97% |
-| Final Val Accuracy | 83.37% |
+| Best Val IoU | 46.56% |
+| Final Val IoU | 46.30% |
+| Final Val Dice | 64.98% |
+| Final Val Accuracy | 83.48% |
 
 ### Test Performance (Unseen Images)
 | Metric | Value |
 |--------|-------|
-| Mean IoU | 19.05% |
-| Sky IoU | 93.95% |
-| Landscape IoU | 55.65% |
-| Trees IoU | 11.10% |
-| Dry Grass IoU | 12.59% |
+| Mean IoU | 19.61% |
+| mAP50 | 17.26% |
+| Sky IoU | 93.15% |
+| Landscape IoU | 55.77% |
+| Trees IoU | 11.74% |
+| Dry Grass IoU | 12.50% |
 
 ## Files
 - `train_segmentation.py`: Training script

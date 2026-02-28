@@ -8,9 +8,10 @@
 This report presents our approach to the Duality AI Offroad Semantic Scene Segmentation challenge. We developed a deep learning model combining a pre-trained DINOv2 Vision Transformer backbone with a custom ConvNeXt-style segmentation head to classify pixels in desert environment images into 10 semantic classes.
 
 **Key Results:**
-- **Validation IoU: 45.54%** (improvement from 26.4% baseline)
-- **Validation Accuracy: 83.37%**
-- **Test IoU: 19.05%** on unseen images
+- **Validation IoU: 46.56%** (improvement from 26.4% baseline)
+- **Validation Accuracy: 83.48%**
+- **Test IoU: 19.61%** on unseen images
+- **Test mAP50: 17.26%**
 
 ---
 
@@ -74,7 +75,7 @@ Applied during training to improve generalization:
 - Future work: Class-weighted loss function
 
 ### Challenge 3: Domain Gap (Train vs Test)
-**Problem:** Test IoU (19.05%) significantly lower than validation IoU (45.54%).
+**Problem:** Test IoU (19.61%) significantly lower than validation IoU (46.56%).
 
 **Analysis:** This indicates a domain shift between training/validation and test distributions. The model generalizes well to similar data but struggles with unseen variations.
 
@@ -95,24 +96,26 @@ Applied during training to improve generalization:
 | 5 | 0.4420 | 0.4358 | 42.88% | 82.91% |
 | 10 | 0.4254 | 0.4222 | 44.57% | 83.13% |
 | 15 | 0.4100 | 0.4150 | 45.20% | 83.30% |
-| 25 | 0.3950 | 0.4100 | 45.38% | 83.37% |
+| 25 | 0.3900 | 0.4050 | 46.30% | 83.48% |
 
-**Best Validation IoU: 45.54%** (achieved during training)
+**Best Validation IoU: 46.56%** (achieved during training)
 
 ### 4.2 Per-Class Test Performance
 
-| Class | IoU | Analysis |
-|-------|-----|----------|
-| Sky | 93.95% | Excellent - distinct visual features |
-| Landscape | 55.65% | Good - large, consistent regions |
-| Dry Grass | 12.59% | Moderate - texture confusion |
-| Trees | 11.10% | Moderate - varied appearances |
-| Rocks | 3.78% | Poor - small, scattered objects |
-| Dry Bushes | 1.27% | Poor - similar to other vegetation |
-| Lush Bushes | 0.92% | Poor - rare in test set |
-| Ground Clutter | 0.72% | Poor - very small objects |
-| Logs | 0.00% | Failed - extremely rare |
-| Background | 0.00% | N/A - minimal presence |
+| Class | IoU | mAP50 | Analysis |
+|-------|-----|-------|----------|
+| Sky | 93.15% | 100.00% | Excellent - distinct visual features |
+| Landscape | 55.77% | 72.55% | Good - large, consistent regions |
+| Dry Grass | 12.50% | 0.00% | Moderate - texture confusion |
+| Trees | 11.74% | 0.00% | Moderate - varied appearances |
+| Rocks | 3.03% | 0.00% | Poor - small, scattered objects |
+| Dry Bushes | 2.18% | 0.00% | Poor - similar to other vegetation |
+| Lush Bushes | 0.92% | 0.00% | Poor - rare in test set |
+| Ground Clutter | 0.71% | 0.00% | Poor - very small objects |
+| Logs | 0.00% | 0.00% | Failed - extremely rare |
+| Background | 0.00% | 0.00% | N/A - minimal presence |
+
+**Test mAP50: 17.26%** (Mean Average Precision at IoU threshold 0.5)
 
 ### 4.3 Key Observations
 

@@ -1,0 +1,19 @@
+# Large datasets - don't upload
+Offroad_Segmentation_Training_Dataset/
+Offroad_Segmentation_Training_Dataset.zip
+Offroad_Segmentation_testImages/
+
+# Kaggle working directories
+kaggle working/
+kaggle working 2/
+
+# Scripts folder (use Submission instead)
+Offroad_Segmentation_Scripts/
+
+# Zip files
+*.zip
+
+# Cache
+__pycache__/
+.cache/
+*.pyc

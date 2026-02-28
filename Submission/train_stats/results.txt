@@ -1,10 +1,10 @@
 TRAINING RESULTS
 ==================================================
 
-Best Val IoU: 0.4554
-Final Val IoU: 0.4538
-Final Val Dice: 0.6397
-Final Val Accuracy: 0.8337
+Best Val IoU: 0.4656
+Final Val IoU: 0.4630
+Final Val Dice: 0.6498
+Final Val Accuracy: 0.8348
 
 Hyperparameters:
   Epochs: 25
